@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Huseina Basrai | Portfolio</title>
 
     <style>
@@ -12,192 +13,684 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #24352d;
-            background-color: #f7f8f5;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #25342d;
+            background: #fafbf8;
         }
 
-        header {
-            background-color: #dce8df;
-            padding: 60px 20px;
-            text-align: center;
+        /* NAVIGATION */
+
+        nav {
+            background: rgba(34, 53, 44, 0.97);
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        header h1 {
-            font-size: 42px;
+        .nav-name {
+            color: white;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: .3px;
+        }
+
+        .nav-links a {
+            color: #eef3ef;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #bcd2c3;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 610px;
+            background:
+                linear-gradient(135deg, #e4eee7 0%, #f5f1e8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 8%;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1150px;
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: #587564;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 12px;
         }
 
-        header p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 19px;
+        .hero h1 {
+            font-size: 62px;
+            line-height: 1.05;
+            margin-bottom: 18px;
+            color: #21362b;
         }
 
-        nav {
-            background-color: #24352d;
-            padding: 15px;
-            text-align: center;
+        .hero h2 {
+            font-size: 23px;
+            font-weight: 500;
+            color: #557061;
+            margin-bottom: 20px;
         }
 
-        nav a {
-            color: white;
+        .hero-description {
+            max-width: 650px;
+            font-size: 18px;
+            color: #4e5d55;
+            margin-bottom: 30px;
+        }
+
+        .academic-line {
+            font-size: 15px;
+            color: #607067;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 7px;
             text-decoration: none;
-            margin: 0 18px;
             font-weight: bold;
+            transition: .2s;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .primary-button {
+            background: #294a39;
+            color: white;
         }
+
+        .secondary-button {
+            border: 1px solid #294a39;
+            color: #294a39;
+            background: transparent;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .profile-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-photo {
+            width: 330px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 170px 170px 25px 25px;
+            border: 8px solid rgba(255,255,255,.65);
+            box-shadow: 0 18px 45px rgba(41,74,57,.18);
+        }
+
+        /* GENERAL SECTIONS */
 
         section {
-            max-width: 950px;
-            margin: 50px auto;
-            padding: 0 25px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 85px 30px;
         }
 
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #24352d;
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #708b79;
+            margin-bottom: 7px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            color: #243d31;
+            margin-bottom: 25px;
+        }
+
+        .intro-text {
+            max-width: 850px;
+            font-size: 18px;
+            color: #56635c;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .education-card {
+            background: #eef3ee;
+            padding: 28px;
+            border-radius: 14px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 15px;
+            color: #294a39;
+        }
+
+        .education-card p {
+            margin-bottom: 8px;
+            color: #56635c;
+        }
+
+        /* SKILLS */
+
+        .skills-section {
+            background: #f0f4ef;
+            max-width: none;
+        }
+
+        .skills-inner {
+            max-width: 1100px;
+            margin: auto;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
+            margin-top: 25px;
         }
 
         .skill {
-            background-color: white;
-            border: 1px solid #cbd8ce;
-            border-radius: 20px;
-            padding: 10px 18px;
+            background: white;
+            border: 1px solid #d6e0d8;
+            border-radius: 30px;
+            padding: 11px 19px;
+            font-size: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,.025);
+        }
+
+        /* FEATURED WORK */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 35px;
         }
 
         .project {
-            background-color: white;
-            padding: 25px;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #e0e5e1;
+            box-shadow: 0 8px 25px rgba(30,55,42,.06);
+            transition: .25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(30,55,42,.11);
+        }
+
+        .project-number {
+            font-size: 13px;
+            font-weight: bold;
+            color: #82978a;
             margin-bottom: 20px;
-            border-radius: 12px;
-            border: 1px solid #d8ded9;
         }
 
         .project h3 {
-            margin-bottom: 10px;
-            font-size: 21px;
+            color: #294a39;
+            font-size: 23px;
+            line-height: 1.25;
+            margin-bottom: 7px;
+        }
+
+        .project-role {
+            color: #7a887f;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 17px;
+        }
+
+        .project p {
+            color: #59675f;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project ul {
+            padding-left: 19px;
+            color: #59675f;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .project li {
+            margin-bottom: 7px;
         }
 
         .project a {
-            color: #496f5b;
-            font-weight: bold;
+            color: #426b55;
             text-decoration: none;
+            font-weight: bold;
+            margin-top: auto;
         }
 
         .project a:hover {
             text-decoration: underline;
         }
 
+        /* EXPERIENCE */
+
+        .experience {
+            border-left: 2px solid #c9d8ce;
+            padding-left: 28px;
+            margin-top: 30px;
+        }
+
+        .experience-item {
+            margin-bottom: 32px;
+        }
+
+        .experience-item h3 {
+            font-size: 20px;
+            color: #294a39;
+        }
+
+        .experience-item .role {
+            color: #6c7c73;
+            font-weight: bold;
+            margin: 3px 0 7px;
+        }
+
+        .experience-item p {
+            color: #59675f;
+        }
+
+        /* FOOTER */
+
         footer {
+            background: #22372c;
+            color: #eef3ef;
             text-align: center;
-            background-color: #24352d;
-            color: white;
-            padding: 25px;
-            margin-top: 60px;
+            padding: 45px 20px;
+        }
+
+        footer h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #c9d5ce;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .hero-container,
+            .about-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .profile-wrap {
+                order: -1;
+            }
+
+            .profile-photo {
+                width: 245px;
+                height: 295px;
+            }
+
+            .projects-grid {
+                gap: 18px;
+            }
+
+            .nav-name {
+                display: none;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .nav-links a {
+                margin: 0 9px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Huseina Basrai</h1>
-        <p>
-            Rutgers Business School student studying Supply Chain Management and Professional Selling, 
-            with interests in entrepreneurship, marketing, and creating meaningful business experiences.
-        </p>
-    </header>
+<nav>
+    <div class="nav-name">Huseina Basrai</div>
 
-    <nav>
+    <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </nav>
+        <a href="#work">Featured Work</a>
+        <a href="#experience">Experience</a>
+    </div>
+</nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Supply Chain Management student at Rutgers Business School with a concentration 
-            in Professional Selling, interested in connecting business strategy, supply chain, 
-            marketing, and entrepreneurship.
-        </p>
-    </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
+<header class="hero">
+
+    <div class="hero-container">
+
+        <div>
+            <p class="eyebrow">Rutgers Business School</p>
+
+            <h1>Huseina<br>Basrai</h1>
+
+            <h2>Supply Chain • Professional Selling • Entrepreneurship</h2>
+
+            <p class="hero-description">
+                Rutgers Business School student combining supply chain strategy,
+                professional selling, marketing, and entrepreneurship to turn ideas
+                into experiences that connect with people.
+            </p>
+
+            <p class="academic-line">
+                Supply Chain Management Major &nbsp;•&nbsp;
+                Psychology Minor &nbsp;•&nbsp;
+                Professional Selling Concentration
+            </p>
+
+            <a href="#work" class="button primary-button">
+                Explore My Work
+            </a>
+
+            <a href="#about" class="button secondary-button">
+                About Me
+            </a>
+        </div>
+
+        <div class="profile-wrap">
+            <img src="profile.jpg"
+                 alt="Huseina Basrai"
+                 class="profile-photo">
+        </div>
+
+    </div>
+
+</header>
+
+
+<section id="about">
+
+    <p class="section-label">Get to know me</p>
+    <h2>About Me</h2>
+
+    <div class="about-grid">
+
+        <div>
+            <p class="intro-text">
+                I am a Rutgers Business School student studying Supply Chain Management
+                with a minor in Psychology and a concentration in Professional Selling.
+                My experiences span supply chain operations, digital media, marketing,
+                leadership, and entrepreneurship.
+                <br><br>
+                I enjoy understanding both how businesses operate and how people connect
+                with them. Whether I am analyzing distribution data, developing a digital
+                campaign, building a brand, or creating a customer experience, I am drawn
+                to work that combines strategy, creativity, and meaningful human connection.
+            </p>
+        </div>
+
+        <div class="education-card">
+            <h3>Education</h3>
+
+            <p><strong>Rutgers Business School</strong></p>
+            <p>Supply Chain Management</p>
+            <p>Minor: Psychology</p>
+            <p>Concentration: Professional Selling</p>
+            <p>New Brunswick, NJ</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="skills" class="skills-section">
+
+    <div class="skills-inner">
+
+        <p class="section-label">What I bring</p>
+        <h2>Skills & Interests</h2>
 
         <div class="skills">
             <div class="skill">Supply Chain Management</div>
-            <div class="skill">Professional Selling</div>
-            <div class="skill">Marketing</div>
-            <div class="skill">Entrepreneurship</div>
-            <div class="skill">Project Management</div>
+            <div class="skill">Distribution Operations</div>
             <div class="skill">Inventory Management</div>
-            <div class="skill">Customer Service</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Power Query</div>
+            <div class="skill">SQL</div>
+            <div class="skill">VBA</div>
+            <div class="skill">Professional Selling</div>
+            <div class="skill">Marketing Strategy</div>
+            <div class="skill">Digital Media</div>
+            <div class="skill">Brand Development</div>
+            <div class="skill">Entrepreneurship</div>
             <div class="skill">Social Media</div>
             <div class="skill">Leadership</div>
-            <div class="skill">Communication</div>
-            <div class="skill">Microsoft Excel</div>
-            <div class="skill">Business Strategy</div>
+            <div class="skill">Public Speaking</div>
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    </div>
+
+</section>
+
+
+<section id="work">
+
+    <p class="section-label">A few things I'm proud of</p>
+    <h2>Featured Work</h2>
+
+    <p class="intro-text">
+        My experiences allow me to explore business from different perspectives —
+        from building my own brand to improving distribution operations and creating
+        digital experiences.
+    </p>
+
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
 
         <div class="project">
+
+            <div class="project-number">01 / ENTREPRENEURSHIP</div>
+
             <h3>Huseina Brews</h3>
+
+            <div class="project-role">
+                Founder & Small Business Owner
+            </div>
+
             <p>
-                Founded and operate a specialty coffee business focused on creating 
-                unique coffee experiences. Responsibilities include sourcing, inventory 
-                planning, event operations, customer service, marketing, and brand development.
+                Built a coffee-inspired brand around creativity, community, and
+                connection while learning the business behind bringing a product
+                and customer experience to life.
             </p>
-            <br>
-            <a href="https://www.instagram.com/huseina.brews/" target="_blank">
-                View Huseina Brews →
+
+            <ul>
+                <li>Brand development and marketing</li>
+                <li>Product and coffee exploration</li>
+                <li>Inventory and event operations</li>
+                <li>Customer experience</li>
+            </ul>
+
+            <a href="https://www.instagram.com/huseina.brews/"
+               target="_blank">
+                Explore Huseina Brews →
             </a>
+
         </div>
 
+
+        <!-- PROJECT 2 -->
+
         <div class="project">
+
+            <div class="project-number">02 / SUPPLY CHAIN</div>
+
+            <h3>Johnson & Johnson</h3>
+
+            <div class="project-role">
+                Distribution Operations Intern
+            </div>
+
+            <p>
+                Supported distribution operations by analyzing warehouse,
+                inventory, and transportation data and translating operational
+                information into useful reporting and insights.
+            </p>
+
+            <ul>
+                <li>Warehouse and inventory analytics</li>
+                <li>Operational metrics and reporting</li>
+                <li>Excel, SQL, Power BI & Power Query</li>
+                <li>Warehouse tours and communication</li>
+            </ul>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project">
+
+            <div class="project-number">03 / DIGITAL MEDIA</div>
+
+            <h3>Rutgers University Foundation</h3>
+
+            <div class="project-role">
+                Digital Media Intern
+            </div>
+
+            <p>
+                Create digital and branded content supporting university
+                initiatives, using design and storytelling to strengthen
+                engagement across digital platforms.
+            </p>
+
+            <ul>
+                <li>Digital marketing assets</li>
+                <li>Website content</li>
+                <li>Multimedia storytelling</li>
+                <li>Brand visibility and engagement</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="experience">
+
+    <p class="section-label">Beyond the classroom</p>
+    <h2>Leadership & Creative Experience</h2>
+
+
+    <div class="experience">
+
+        <div class="experience-item">
+            <h3>Rutgers Undergraduate Women in Business</h3>
+            <div class="role">Co-Director of Marketing</div>
+            <p>
+                Lead social media, branding, promotional efforts, and digital
+                content while overseeing the Media Committee.
+            </p>
+        </div>
+
+
+        <div class="experience-item">
+            <h3>Women BUILD</h3>
+            <div class="role">Director of Marketing & Cohort Member</div>
+            <p>
+                Contribute to marketing initiatives while participating in a
+                multi-year leadership program centered on mentorship,
+                professional development, and advancing women in business.
+            </p>
+        </div>
+
+
+        <div class="experience-item">
             <h3>What Did She Say? Podcast</h3>
+            <div class="role">Co-Host & Co-Creator</div>
             <p>
-                Co-created and produced a podcast focused on personal growth, student life, 
-                and well-being. Work includes content planning, episode development, 
-                branding, and audience engagement.
-            </p>
-            <br>
-            <a href="https://open.spotify.com/" target="_blank">
-                View Podcast →
-            </a>
-        </div>
-
-        <div class="project">
-            <h3>Rutgers Business School Projects</h3>
-            <p>
-                Completed academic projects focused on business, supply chain management, 
-                professional selling, and project management, applying classroom concepts 
-                to practical business situations.
+                Co-created a podcast exploring self-growth, college life, and
+                defining success through authentic conversations with students,
+                friends, and professionals.
             </p>
         </div>
 
-    </section>
+    </div>
 
-    <footer>
-        <p>Huseina Basrai | Rutgers Business School</p>
-    </footer>
+</section>
+
+
+<footer>
+
+    <h3>Huseina Basrai</h3>
+
+    <p>
+        Supply Chain • Marketing • Entrepreneurship • Professional Selling
+    </p>
+
+</footer>
 
 </body>
 </html>
