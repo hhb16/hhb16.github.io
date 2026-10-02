@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +47,7 @@
         .nav-links a {
             color: #eef3ef;
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 28px;
             font-size: 15px;
             font-weight: 600;
         }
@@ -60,8 +60,12 @@
 
         .hero {
             min-height: 610px;
-            background:
-                linear-gradient(135deg, #e4eee7 0%, #f5f1e8 100%);
+            background: linear-gradient(
+                135deg,
+                #e4eee7 0%,
+                #f5f1e8 100%
+            );
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -104,7 +108,7 @@
             max-width: 650px;
             font-size: 18px;
             color: #4e5d55;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .academic-line {
@@ -112,6 +116,8 @@
             color: #607067;
             margin-bottom: 30px;
         }
+
+        /* BUTTONS */
 
         .button {
             display: inline-block;
@@ -139,6 +145,8 @@
             transform: translateY(-2px);
         }
 
+        /* PROFILE PHOTO */
+
         .profile-wrap {
             display: flex;
             justify-content: center;
@@ -148,12 +156,13 @@
             width: 330px;
             height: 400px;
             object-fit: cover;
+            object-position: center;
             border-radius: 170px 170px 25px 25px;
             border: 8px solid rgba(255,255,255,.65);
             box-shadow: 0 18px 45px rgba(41,74,57,.18);
         }
 
-        /* GENERAL SECTIONS */
+        /* GENERAL */
 
         section {
             max-width: 1100px;
@@ -318,7 +327,7 @@
         }
 
         .experience-item {
-            margin-bottom: 32px;
+            margin-bottom: 38px;
         }
 
         .experience-item h3 {
@@ -334,6 +343,19 @@
 
         .experience-item p {
             color: #59675f;
+            max-width: 800px;
+        }
+
+        .experience-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #426b55;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .experience-link:hover {
+            text-decoration: underline;
         }
 
         /* FOOTER */
@@ -342,16 +364,28 @@
             background: #22372c;
             color: #eef3ef;
             text-align: center;
-            padding: 45px 20px;
+            padding: 50px 20px;
         }
 
         footer h3 {
-            font-size: 24px;
+            font-size: 25px;
             margin-bottom: 8px;
         }
 
         footer p {
             color: #c9d5ce;
+            margin-bottom: 18px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
 
         /* MOBILE */
@@ -396,10 +430,15 @@
 
             nav {
                 justify-content: center;
+                overflow-x: auto;
+            }
+
+            .nav-links {
+                white-space: nowrap;
             }
 
             .nav-links a {
-                margin: 0 9px;
+                margin: 0 8px;
                 font-size: 13px;
             }
         }
@@ -408,54 +447,107 @@
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-    <div class="nav-name">Huseina Basrai</div>
+
+    <div class="nav-name">
+        Huseina Basrai
+    </div>
 
     <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Featured Work</a>
-        <a href="#experience">Experience</a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#skills">
+            Skills
+        </a>
+
+        <a href="#work">
+            Featured Work
+        </a>
+
+        <a href="#experience">
+            Experience
+        </a>
+
+        <a href="https://www.linkedin.com/in/huseinabasrai/"
+           target="_blank">
+            LinkedIn ↗
+        </a>
+
     </div>
+
 </nav>
 
+
+<!-- HERO -->
 
 <header class="hero">
 
     <div class="hero-container">
 
         <div>
-            <p class="eyebrow">Rutgers Business School</p>
 
-            <h1>Huseina<br>Basrai</h1>
+            <p class="eyebrow">
+                Rutgers Business School
+            </p>
 
-            <h2>Supply Chain • Professional Selling • Entrepreneurship</h2>
+            <h1>
+                Huseina<br>
+                Basrai
+            </h1>
+
+            <h2>
+                Supply Chain • Professional Selling • Entrepreneurship
+            </h2>
 
             <p class="hero-description">
+
                 Rutgers Business School student combining supply chain strategy,
-                professional selling, marketing, and entrepreneurship to turn ideas
-                into experiences that connect with people.
+                professional selling, marketing, and entrepreneurship to turn
+                ideas into experiences that connect with people.
+
             </p>
 
             <p class="academic-line">
-                Supply Chain Management Major &nbsp;•&nbsp;
-                Psychology Minor &nbsp;•&nbsp;
+
+                Supply Chain Management Major
+                &nbsp;•&nbsp;
+                Psychology Minor
+                &nbsp;•&nbsp;
                 Professional Selling Concentration
+
             </p>
 
-            <a href="#work" class="button primary-button">
+            <a href="#work"
+               class="button primary-button">
+
                 Explore My Work
+
             </a>
 
-            <a href="#about" class="button secondary-button">
-                About Me
+            <a href="https://www.linkedin.com/in/huseinabasrai/"
+               target="_blank"
+               class="button secondary-button">
+
+                LinkedIn ↗
+
             </a>
+
         </div>
 
+
         <div class="profile-wrap">
-            <img src="profile.jpg"
-                 alt="Huseina Basrai"
-                 class="profile-photo">
+
+            <img
+                src="profile.jpg"
+                alt="Huseina Basrai"
+                class="profile-photo"
+            >
+
         </div>
 
     </div>
@@ -463,35 +555,74 @@
 </header>
 
 
+<!-- ABOUT -->
+
 <section id="about">
 
-    <p class="section-label">Get to know me</p>
-    <h2>About Me</h2>
+    <p class="section-label">
+        Get to know me
+    </p>
+
+    <h2>
+        About Me
+    </h2>
+
 
     <div class="about-grid">
 
         <div>
+
             <p class="intro-text">
-                I am a Rutgers Business School student studying Supply Chain Management
-                with a minor in Psychology and a concentration in Professional Selling.
-                My experiences span supply chain operations, digital media, marketing,
-                leadership, and entrepreneurship.
+
+                I am a Rutgers Business School student studying Supply Chain
+                Management with a minor in Psychology and a concentration in
+                Professional Selling.
+
                 <br><br>
-                I enjoy understanding both how businesses operate and how people connect
-                with them. Whether I am analyzing distribution data, developing a digital
-                campaign, building a brand, or creating a customer experience, I am drawn
-                to work that combines strategy, creativity, and meaningful human connection.
+
+                My experiences span supply chain operations, digital media,
+                marketing, leadership, and entrepreneurship. I enjoy
+                understanding both how businesses operate and how people
+                connect with them.
+
+                <br><br>
+
+                Whether I am analyzing distribution data, developing a digital
+                campaign, building a brand, or creating a customer experience,
+                I am drawn to work that combines strategy, creativity, and
+                meaningful human connection.
+
             </p>
+
         </div>
 
-        <div class="education-card">
-            <h3>Education</h3>
 
-            <p><strong>Rutgers Business School</strong></p>
-            <p>Supply Chain Management</p>
-            <p>Minor: Psychology</p>
-            <p>Concentration: Professional Selling</p>
-            <p>New Brunswick, NJ</p>
+        <div class="education-card">
+
+            <h3>
+                Education
+            </h3>
+
+            <p>
+                <strong>Rutgers Business School</strong>
+            </p>
+
+            <p>
+                Supply Chain Management Major
+            </p>
+
+            <p>
+                Psychology Minor
+            </p>
+
+            <p>
+                Professional Selling Concentration
+            </p>
+
+            <p>
+                New Brunswick, NJ
+            </p>
+
         </div>
 
     </div>
@@ -499,31 +630,92 @@
 </section>
 
 
-<section id="skills" class="skills-section">
+<!-- SKILLS -->
+
+<section id="skills"
+         class="skills-section">
 
     <div class="skills-inner">
 
-        <p class="section-label">What I bring</p>
-        <h2>Skills & Interests</h2>
+        <p class="section-label">
+            What I bring
+        </p>
+
+        <h2>
+            Skills & Interests
+        </h2>
+
 
         <div class="skills">
-            <div class="skill">Supply Chain Management</div>
-            <div class="skill">Distribution Operations</div>
-            <div class="skill">Inventory Management</div>
-            <div class="skill">Data Analysis</div>
-            <div class="skill">Microsoft Excel</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Power Query</div>
-            <div class="skill">SQL</div>
-            <div class="skill">VBA</div>
-            <div class="skill">Professional Selling</div>
-            <div class="skill">Marketing Strategy</div>
-            <div class="skill">Digital Media</div>
-            <div class="skill">Brand Development</div>
-            <div class="skill">Entrepreneurship</div>
-            <div class="skill">Social Media</div>
-            <div class="skill">Leadership</div>
-            <div class="skill">Public Speaking</div>
+
+            <div class="skill">
+                Supply Chain Management
+            </div>
+
+            <div class="skill">
+                Distribution Operations
+            </div>
+
+            <div class="skill">
+                Inventory Management
+            </div>
+
+            <div class="skill">
+                Data Analysis
+            </div>
+
+            <div class="skill">
+                Microsoft Excel
+            </div>
+
+            <div class="skill">
+                Power BI
+            </div>
+
+            <div class="skill">
+                Power Query
+            </div>
+
+            <div class="skill">
+                SQL
+            </div>
+
+            <div class="skill">
+                VBA
+            </div>
+
+            <div class="skill">
+                Professional Selling
+            </div>
+
+            <div class="skill">
+                Marketing Strategy
+            </div>
+
+            <div class="skill">
+                Digital Media
+            </div>
+
+            <div class="skill">
+                Brand Development
+            </div>
+
+            <div class="skill">
+                Entrepreneurship
+            </div>
+
+            <div class="skill">
+                Social Media
+            </div>
+
+            <div class="skill">
+                Leadership
+            </div>
+
+            <div class="skill">
+                Public Speaking
+            </div>
+
         </div>
 
     </div>
@@ -531,104 +723,174 @@
 </section>
 
 
+<!-- FEATURED WORK -->
+
 <section id="work">
 
-    <p class="section-label">A few things I'm proud of</p>
-    <h2>Featured Work</h2>
+    <p class="section-label">
+        A few things I'm proud of
+    </p>
+
+    <h2>
+        Featured Work
+    </h2>
+
 
     <p class="intro-text">
-        My experiences allow me to explore business from different perspectives —
-        from building my own brand to improving distribution operations and creating
-        digital experiences.
+
+        My experiences allow me to explore business from different
+        perspectives — from building my own brand to improving distribution
+        operations and creating digital experiences.
+
     </p>
 
 
     <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
+
+        <!-- HUSEINA BREWS -->
 
         <div class="project">
 
-            <div class="project-number">01 / ENTREPRENEURSHIP</div>
+            <div class="project-number">
+                01 / ENTREPRENEURSHIP
+            </div>
 
-            <h3>Huseina Brews</h3>
+            <h3>
+                Huseina Brews
+            </h3>
 
             <div class="project-role">
                 Founder & Small Business Owner
             </div>
 
             <p>
-                Built a coffee-inspired brand around creativity, community, and
-                connection while learning the business behind bringing a product
-                and customer experience to life.
+
+                Built a coffee-inspired brand around creativity, community,
+                and connection while learning the business behind bringing
+                a product and customer experience to life.
+
             </p>
 
             <ul>
-                <li>Brand development and marketing</li>
-                <li>Product and coffee exploration</li>
-                <li>Inventory and event operations</li>
-                <li>Customer experience</li>
+
+                <li>
+                    Brand development and marketing
+                </li>
+
+                <li>
+                    Product and coffee exploration
+                </li>
+
+                <li>
+                    Inventory and event operations
+                </li>
+
+                <li>
+                    Customer experience
+                </li>
+
             </ul>
 
-            <a href="https://www.instagram.com/huseina.brews/"
-               target="_blank">
+            <a
+                href="https://www.instagram.com/huseina.brews/"
+                target="_blank"
+            >
                 Explore Huseina Brews →
             </a>
 
         </div>
 
 
-        <!-- PROJECT 2 -->
+        <!-- JOHNSON & JOHNSON -->
 
         <div class="project">
 
-            <div class="project-number">02 / SUPPLY CHAIN</div>
+            <div class="project-number">
+                02 / SUPPLY CHAIN
+            </div>
 
-            <h3>Johnson & Johnson</h3>
+            <h3>
+                Johnson & Johnson
+            </h3>
 
             <div class="project-role">
                 Distribution Operations Intern
             </div>
 
             <p>
+
                 Supported distribution operations by analyzing warehouse,
-                inventory, and transportation data and translating operational
-                information into useful reporting and insights.
+                inventory, and transportation data and translating
+                operational information into useful reporting and insights.
+
             </p>
 
             <ul>
-                <li>Warehouse and inventory analytics</li>
-                <li>Operational metrics and reporting</li>
-                <li>Excel, SQL, Power BI & Power Query</li>
-                <li>Warehouse tours and communication</li>
+
+                <li>
+                    Warehouse and inventory analytics
+                </li>
+
+                <li>
+                    Operational metrics and reporting
+                </li>
+
+                <li>
+                    Excel, SQL, Power BI & Power Query
+                </li>
+
+                <li>
+                    Warehouse tours and communication
+                </li>
+
             </ul>
 
         </div>
 
 
-        <!-- PROJECT 3 -->
+        <!-- RUTGERS FOUNDATION -->
 
         <div class="project">
 
-            <div class="project-number">03 / DIGITAL MEDIA</div>
+            <div class="project-number">
+                03 / DIGITAL MEDIA
+            </div>
 
-            <h3>Rutgers University Foundation</h3>
+            <h3>
+                Rutgers University Foundation
+            </h3>
 
             <div class="project-role">
                 Digital Media Intern
             </div>
 
             <p>
+
                 Create digital and branded content supporting university
                 initiatives, using design and storytelling to strengthen
                 engagement across digital platforms.
+
             </p>
 
             <ul>
-                <li>Digital marketing assets</li>
-                <li>Website content</li>
-                <li>Multimedia storytelling</li>
-                <li>Brand visibility and engagement</li>
+
+                <li>
+                    Digital marketing assets
+                </li>
+
+                <li>
+                    Website content
+                </li>
+
+                <li>
+                    Multimedia storytelling
+                </li>
+
+                <li>
+                    Brand visibility and engagement
+                </li>
+
             </ul>
 
         </div>
@@ -638,43 +900,95 @@
 </section>
 
 
+<!-- LEADERSHIP / CREATIVE EXPERIENCE -->
+
 <section id="experience">
 
-    <p class="section-label">Beyond the classroom</p>
-    <h2>Leadership & Creative Experience</h2>
+    <p class="section-label">
+        Beyond the classroom
+    </p>
+
+    <h2>
+        Leadership & Creative Experience
+    </h2>
 
 
     <div class="experience">
 
+
+        <!-- WOMEN IN BUSINESS -->
+
         <div class="experience-item">
-            <h3>Rutgers Undergraduate Women in Business</h3>
-            <div class="role">Co-Director of Marketing</div>
+
+            <h3>
+                Rutgers Undergraduate Women in Business
+            </h3>
+
+            <div class="role">
+                Co-Director of Marketing
+            </div>
+
             <p>
-                Lead social media, branding, promotional efforts, and digital
-                content while overseeing the Media Committee.
+
+                Lead social media, branding, promotional efforts, and
+                digital content while overseeing the Media Committee.
+
             </p>
+
         </div>
 
 
+        <!-- WOMEN BUILD -->
+
         <div class="experience-item">
-            <h3>Women BUILD</h3>
-            <div class="role">Director of Marketing & Cohort Member</div>
+
+            <h3>
+                Women BUILD
+            </h3>
+
+            <div class="role">
+                Director of Marketing & Cohort Member
+            </div>
+
             <p>
-                Contribute to marketing initiatives while participating in a
-                multi-year leadership program centered on mentorship,
+
+                Contribute to marketing initiatives while participating
+                in a multi-year leadership program centered on mentorship,
                 professional development, and advancing women in business.
+
             </p>
+
         </div>
 
 
+        <!-- PODCAST -->
+
         <div class="experience-item">
-            <h3>What Did She Say? Podcast</h3>
-            <div class="role">Co-Host & Co-Creator</div>
+
+            <h3>
+                What Did She Say? Podcast
+            </h3>
+
+            <div class="role">
+                Co-Host & Co-Creator
+            </div>
+
             <p>
-                Co-created a podcast exploring self-growth, college life, and
-                defining success through authentic conversations with students,
-                friends, and professionals.
+
+                Co-created a podcast exploring self-growth, college life,
+                and defining success through authentic conversations with
+                students, friends, and professionals.
+
             </p>
+
+            <a
+                href="https://open.spotify.com/episode/4xAzErNFRIv6umN9ZJtPjm?si=WIJqpaLLSlehx-LHnLjRJw"
+                target="_blank"
+                class="experience-link"
+            >
+                Listen on Spotify →
+            </a>
+
         </div>
 
     </div>
@@ -682,13 +996,42 @@
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <h3>Huseina Basrai</h3>
+    <h3>
+        Huseina Basrai
+    </h3>
 
     <p>
         Supply Chain • Marketing • Entrepreneurship • Professional Selling
     </p>
+
+    <div class="footer-links">
+
+        <a
+            href="https://www.linkedin.com/in/huseinabasrai/"
+            target="_blank"
+        >
+            LinkedIn
+        </a>
+
+        <a
+            href="https://www.instagram.com/huseina.brews/"
+            target="_blank"
+        >
+            Huseina Brews
+        </a>
+
+        <a
+            href="https://open.spotify.com/episode/4xAzErNFRIv6umN9ZJtPjm?si=WIJqpaLLSlehx-LHnLjRJw"
+            target="_blank"
+        >
+            Podcast
+        </a>
+
+    </div>
 
 </footer>
 
